@@ -42,7 +42,7 @@ function fadePages() {
     }
     var updates = document.getElementById("updates");
     if(parseFloat(updates.style.opacity) > 0) {
-      document.getElementById("updates").style.opacity = parseFloat(about.style.opacity) - 0.05;
+      document.getElementById("updates").style.opacity = parseFloat(updates.style.opacity) - 0.05;
     }
   }
   else if(currentPage === "updates") {
@@ -113,19 +113,19 @@ function btn3NoHover() {
   updatesBg += (updatesBg < 200) ? 5 : 0;
 };
 function doByTime() {
-  if(btn1Hovering) {
+  if(btn1Hovering || currentPage === "about") {
     btn1Hover();
   }
   else {
     btn1NoHover();
   }
-  if(btn2Hovering) {
+  if(btn2Hovering || currentPage === "games") {
     btn2Hover();
   }
   else {
     btn2NoHover();
   }
-  if(btn3Hovering) {
+  if(btn3Hovering || currentPage === "updates") {
     btn3Hover();
   }
   else {
