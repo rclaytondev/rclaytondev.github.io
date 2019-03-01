@@ -40,6 +40,9 @@
 	font-size: 20px;
 	line-height: 20px;
 }
+#about-tab-txt, #games-tab-txt, #updates-tab-txt {
+	margin-top: 13px;
+}
 a {
 	color: rgb(100, 100, 255);
 }

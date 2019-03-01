@@ -1,19 +1,40 @@
-var currentPage = "games";
+var currentPage;
+var aboutTxt = 100;
+var aboutBg = 200;
+var btn1Hovering = false;
+var gamesTxt = 100;
+var gamesBg = 200;
+var btn2Hovering = false;
+var updatesTxt = 100;
+var updatesBg = 200;
+var btn3Hovering = false;
+if(localStorage.getItem("currentPage") === null) {
+  currentPage = "games";
+}
+else {
+  currentPage = localStorage.getItem("currentPage");
+}
 function init() {
   if(currentPage === "about") {
     document.getElementById("about").style.opacity = 1;
     document.getElementById("games").style.opacity = 0;
     document.getElementById("updates").style.opacity = 0;
+    aboutTxt = 200;
+    aboutBg = 100;
   }
   else if(currentPage === "games") {
     document.getElementById("about").style.opacity = 0;
     document.getElementById("games").style.opacity = 1;
     document.getElementById("updates").style.opacity = 0;
+    gamesTxt = 200;
+    gamesBg = 100;
   }
   else if(currentPage === "updates"){
     document.getElementById("about").style.opacity = 0;
     document.getElementById("games").style.opacity = 1;
     document.getElementById("updates").style.opacity = 0;
+    updatesTxt = 200;
+    updatesBg = 100;
   }
 };
 function fadePages() {
@@ -59,17 +80,30 @@ function fadePages() {
       document.getElementById("updates").style.opacity = parseFloat(updates.style.opacity) + 0.05;
     }
   }
+  var about = document.getElementById("about");
+  if(parseFloat(about.style.opacity) <= 0) {
+    about.style.left = "-9999px";
+  }
+  else {
+    about.style.left = "20%";
+  }
+  var games = document.getElementById("games");
+  console.log(parseFloat(games.style.opacity));
+  if(parseFloat(games.style.opacity) <= 0) {
+    games.style.left = "-9999px";
+  }
+  else {
+    games.style.left = "20%";
+  }
+  var updates = document.getElementById("updates");
+  if(parseFloat(updates.style.opacity) <= 0) {
+    updates.style.left = "-9999px";
+  }
+  else {
+    updates.style.left = "20%";
+  }
 };
 init();
-var aboutTxt = 100;
-var aboutBg = 200;
-var btn1Hovering = false;
-var gamesTxt = 100;
-var gamesBg = 200;
-var btn2Hovering = false;
-var updatesTxt = 100;
-var updatesBg = 200;
-var btn3Hovering = false;
 function btn1Hover() {
   var aboutTab = document.getElementById("about-tab");
   aboutTab.style.backgroundColor = "rgb(" + aboutBg + ", " + aboutBg + ", " + aboutBg + ")";
@@ -112,6 +146,7 @@ function btn3NoHover() {
   updatesTxt -= (updatesTxt > 100) ? 5 : 0;
   updatesBg += (updatesBg < 200) ? 5 : 0;
 };
+var pPage = currentPage; //what page you were on 1 frame ago
 function doByTime() {
   if(btn1Hovering || currentPage === "about") {
     btn1Hover();
@@ -132,5 +167,9 @@ function doByTime() {
     btn3NoHover();
   }
   fadePages();
+  if(pPage !== currentPage) {
+    localStorage.setItem("currentPage", currentPage);
+  }
+  pPage = currentPage;
 };
 window.setInterval(doByTime, 1000 / 60);
