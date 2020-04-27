@@ -1,9 +1,5 @@
 #project-container {
 	position: absolute;
-	left: 12%;
-	top: 12%;
-	width: 75%;
-	height: 75%;
 	background-color: rgb(200, 200, 200);
 	border-radius: 10px;
 }
