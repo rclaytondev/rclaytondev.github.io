@@ -4,17 +4,26 @@ body, html {
 	overflow: hidden;
 }
 section {
-	width: 75%;
-	height: 75%;
-
 	background-color: rgb(200, 200, 200);
 	border-radius: 10px;
 	margin: auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
-    /* grid-template-rows: repeat(3,minmax(40px,auto)); */
     grid-gap: 10px;
+}
+
+@media only screen and (orientation: portrait) {
+	section {
+		width: 75vw;
+		height: 75vw;
+	}
+}
+@media only screen and (orientation: landscape) {
+	section {
+		width: 75vh;
+		height: 75vh;
+	}
 }
 
 #random-survival-game {
