@@ -1,16 +1,19 @@
 body, html {
+	background-color: rgb(200, 200, 200);
 	height: 100%;
 	display: grid;
 	overflow: hidden;
 }
 section {
-	background-color: rgb(200, 200, 200);
+	/* background-color: rgb(150, 193, 193); */
+	background-color: rgb(255, 255, 255);
 	border-radius: 10px;
 	margin: auto;
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
     grid-gap: 10px;
+	padding: 10px;
 }
 
 @media only screen and (orientation: portrait) {
