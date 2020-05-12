@@ -77,3 +77,47 @@ img, .project-text {
 	margin-left: 15px;
 	margin-right: 10px;
 }
+
+
+
+
+#about-me-link {
+	position: absolute;
+	margin: 15px;
+	right: 0%;
+	bottom: 0%;
+
+	font: 20px Oxygen;
+	cursor: pointer;
+
+	transition-duration: 0.2s;
+}
+
+#about-me-link:hover {
+	color: rgb(50, 50, 200);
+}
+#about-me-link:not(hover) {
+	color: rgb(100, 100, 200);
+}
+
+
+
+/*
+The following two blocks of code add the underline hover animation to the "About Me" button.
+*/
+#about-me-link:before {
+	content: "";
+	position: absolute;
+	width: 100%;
+	height: 2px;
+	bottom: 0;
+	left: 0;
+	background-color: rgb(100, 100, 200);
+	visibility: hidden;
+	transform: scaleX(0);
+	transition: all 0.2s ease-in-out 0s;
+}
+#about-me-link:hover:before {
+	visibility: visible;
+	transform: scaleX(1);
+}
