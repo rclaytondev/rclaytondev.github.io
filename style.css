@@ -11,7 +11,7 @@ section {
 	display: grid;
 	grid-template-columns: 1fr 1fr 1fr;
 	grid-template-rows: 1fr 1fr 1fr;
-    grid-gap: 10px;
+	grid-gap: 10px;
 	padding: 10px;
 }
 
@@ -44,6 +44,17 @@ section {
 	grid-row: 3 / span 1;
 	grid-column: 3 / span 1;
 }
+.project-link {
+	position: relative;
+}
+.project-text {
+	color: white;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	opacity: 0;
+	font-family: Oxygen;
+}
 
 img {
 	width: 100%;
@@ -51,4 +62,18 @@ img {
 	border-radius: 10px;
 	vertical-align: top;
 	cursor: pointer;
+}
+
+img, .project-text {
+	transition-duration: 0.3s;
+	transition-property: all;
+}
+
+.project-description-title {
+	font-size: 20px;
+	font-weight: bold;
+}
+.project-text {
+	margin-left: 15px;
+	margin-right: 10px;
 }
