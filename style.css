@@ -1,3 +1,15 @@
+html {
+	/*
+	This code prevents the user from selecting any text in the webpage, to make the webpage look nicer.
+	*/
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+	     -moz-user-select: none; /* Old versions of Firefox */
+	      -ms-user-select: none; /* Internet Explorer/Edge */
+	          user-select: none; /* Chrome, Edge, Opera, Firefox */
+}
+
 body, html {
 	background-color: rgb(200, 200, 200);
 	height: 100%;
