@@ -8,8 +8,8 @@ function addHoverEffect(containerID) {
 	var hovering = false;
 	container.onmouseover = function() {
 		image.style["-webkit-filter"] = "blur(50px)";
-		container.style["z-index"] = "1000";
-		image.style["z-index"] = "1000";
+		container.style["z-index"] = "1";
+		image.style["z-index"] = "1";
 		text.style.opacity = "1";
 	};
 	container.onmouseout = function() {
