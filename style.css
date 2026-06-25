@@ -1,54 +1,120 @@
-/* header stuff */
-#header {
-	left: 0px;
-	top: 0px;
-	width: 100%;
-	height: 70px;
+html {
+	/*
+	This code prevents the user from selecting any text in the webpage, to make the webpage look nicer.
+	*/
+	-webkit-touch-callout: none; /* iOS Safari */
+	  -webkit-user-select: none; /* Safari */
+	   -khtml-user-select: none; /* Konqueror HTML */
+	     -moz-user-select: none; /* Old versions of Firefox */
+	      -ms-user-select: none; /* Internet Explorer/Edge */
+	          user-select: none; /* Chrome, Edge, Opera, Firefox */
 }
-#about-tab {
-	left: 15%;
-}
-#games-tab {
-	left: 45%;
-}
-#updates-tab {
-	left: 75%;
-}
-#header, .tabs {
-	position: fixed;
+
+body, html {
 	background-color: rgb(200, 200, 200);
-	text-align: center;
-	font-family: 'Oxygen', sans-serif;
+	height: 100%;
+	display: grid;
+	overflow: hidden;
 }
-.tabs {
-	position: fixed;
-	cursor: pointer;
-	top: 0px;
-	margin-top: 0px;
-	width: 10%;
-	height: 70px;
-	color: rgb(100, 100, 100);
+section {
+	background-color: rgb(20, 20, 40);
+	border-radius: 10px;
+	margin: auto;
+	display: grid;
+	grid-template-columns: 1fr 1fr 1fr;
+	grid-template-rows: 1fr 1fr 1fr;
+	grid-gap: 10px;
+	padding: 10px;
 }
-.content {
-	position: absolute;
-	top: 70px;
-	left: 20%;
-	width: 60%;
-	margin-top: 20px;
-	font-family: 'Oxygen', sans-serif;
-	color: rgb(100, 100, 100);
-	font-size: 20px;
-	line-height: 20px;
+
+@media only screen and (orientation: portrait) {
+	section {
+		width: 75vw;
+		height: 75vw;
+	}
 }
-#about-tab-txt, #games-tab-txt, #updates-tab-txt {
-	margin-top: 13px;
+@media only screen and (orientation: landscape) {
+	section {
+		width: 75vh;
+		height: 75vh;
+	}
 }
-a {
-	color: rgb(100, 100, 255);
+
+#random-survival-game {
+	grid-row: 1 / span 1;
+	grid-column: 1 / span 2;
 }
-.line {
-	background-color: rgb(100, 100, 100);
+#stick-dungeon {
+	grid-row: 1 / span 2;
+	grid-column: 3 / span 1;
+}
+#hypocube-translocation {
+	grid-row: 2 / span 2;
+	grid-column: 1 / span 2;
+}
+#raycaster {
+	grid-row: 3 / span 1;
+	grid-column: 3 / span 1;
+}
+.project-link {
 	position: relative;
-	width: 100%;
-	height: 10px;
 }
+.project-text {
+	color: white;
+	position: absolute;
+	top: 0%;
+	left: 0%;
+	opacity: 0;
+	font-family: Oxygen;
+}
+
+.selected .project-text {
+	opacity: 1;
+}
+
+section img {
+	width: 100%;
+	height: 100%;
+	border-radius: 10px;
+	vertical-align: top;
+}
+.selected img {
+	filter: blur(50px);
+	-webkit-filter: blur(50px);
+}
+
+section {
+	cursor: pointer;
+}
+
+a.play-button {
+	color: rgb(0, 128, 200);
+	padding: 5px;
+	border: 3px solid grey;
+	background-color: rgba(200, 200, 200, 0.1);
+
+	pointer-events: none;
+}
+.selected a.play-button {
+	pointer-events: all;
+}
+
+a.play-button:hover {
+	background-color: rgb(0, 128, 200);
+	color: black;
+}
+
+img, .project-text {
+	transition-duration: 0.3s;
+	transition-property: all;
+}
+
+.project-description-title {
+	font-size: 20px;
+	font-weight: bold;
+}
+.project-text {
+	margin-left: 15px;
+	margin-right: 10px;
+}
+
