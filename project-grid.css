@@ -1,0 +1,20 @@
+#platformer-roguelike {
+	grid-row: 1 / span 2;
+	grid-column: 1 / span 2;
+}
+#random-survival-game {
+	grid-row: 3 / span 1;
+	grid-column: 1 / span 2;
+}
+#stick-dungeon {
+	grid-row: 3 / span 2;
+	grid-column: 3 / span 1;
+}
+#hypocube-translocation {
+	grid-row: 4 / span 2;
+	grid-column: 1 / span 2;
+}
+#raycaster {
+	grid-row: 5 / span 1;
+	grid-column: 3 / span 1;
+}
