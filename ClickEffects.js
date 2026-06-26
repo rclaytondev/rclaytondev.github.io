@@ -34,6 +34,7 @@ class Project {
 	static ALL_PROJECTS = [
 		new Project("platformer-roguelike"),
 		new Project("project-euler"),
+		new Project("math-editor"),
 		new Project("random-survival-game"),
 		new Project("stick-dungeon"),
 		new Project("hypocube-translocation"),

@@ -32,7 +32,7 @@ section {
 		width: 75vw;
 		height: 75vw;
 
-		grid-template-rows: repeat(3, calc(25vw - 10px));
+		grid-template-rows: repeat(6, calc(25vw - 10px));
 		grid-template-columns: repeat(3, calc(25vw - 10px));
 	}
 }
@@ -41,7 +41,7 @@ section {
 		width: 75vh;
 		height: 75vh;
 
-		grid-template-rows: repeat(3, calc(25vh - 10px));
+		grid-template-rows: repeat(6, calc(25vh - 10px));
 		grid-template-columns: repeat(3, calc(25vh - 10px));
 	}
 }
