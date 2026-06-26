@@ -35,6 +35,13 @@ a.play-button {
 	border: 3px solid rgb(0, 50, 150);
 }
 
+article:hover .background-image, .selected .background-image {
+	transform: scale(1.1);
+}
+article {
+	overflow: hidden;
+}
+
 a.play-button:hover {
 	background-color: rgb(0, 150, 225);
 	color: white;
