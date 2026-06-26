@@ -27,44 +27,6 @@ section {
 	overflow-x: hidden;
 }
 
-@media only screen and (orientation: portrait) {
-	section {
-		width: 75vw;
-		height: 75vw;
-
-		grid-template-rows: repeat(6, calc(25vw - 10px));
-		grid-template-columns: repeat(3, calc(25vw - 10px));
-	}
-}
-@media only screen and (orientation: landscape) {
-	section {
-		width: 75vh;
-		height: 75vh;
-
-		grid-template-rows: repeat(6, calc(25vh - 10px));
-		grid-template-columns: repeat(3, calc(25vh - 10px));
-	}
-}
-
-.project-link {
-	position: relative;
-	height: 100%;
-}
-.selected .project-link {
-	overflow-y: auto;
-}
-.project-text {
-	color: white;
-	position: relative;
-	top: 0%;
-	left: 0%;
-	opacity: 0;
-	font-family: Oxygen;
-}
-
-.selected .project-text {
-	opacity: 1;
-}
 
 article {
 	position: relative;
@@ -76,42 +38,8 @@ article {
 	width: 100%;
 	height: 100%;
 }
-.selected .background-image {
-	filter: blur(50px);
-}
 
 section {
 	cursor: pointer;
-}
-
-a.play-button {
-	color: rgb(0, 128, 200);
-	padding: 5px;
-	border: 3px solid grey;
-	background-color: rgba(200, 200, 200, 0.1);
-
-	pointer-events: none;
-}
-.selected a.play-button {
-	pointer-events: all;
-}
-
-a.play-button:hover {
-	background-color: rgb(0, 128, 200);
-	color: black;
-}
-
-.background-image, .project-text {
-	transition-duration: 0.3s;
-	transition-property: all;
-}
-
-.project-description-title {
-	font-size: 20px;
-	font-weight: bold;
-}
-.project-text {
-	margin-left: 15px;
-	margin-right: 10px;
 }
 
