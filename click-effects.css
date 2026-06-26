@@ -1,4 +1,5 @@
 .project-link {
+	color: white;
 	position: relative;
 	height: 100%;
 }
@@ -6,7 +7,6 @@
 	overflow-y: auto;
 }
 .project-text {
-	color: white;
 	position: relative;
 	top: 0%;
 	left: 0%;
@@ -47,4 +47,7 @@ a.play-button:hover {
 .project-text {
 	margin-left: 15px;
 	margin-right: 10px;
+}
+.light-background .project-link {
+	color: rgb(0, 0, 0);
 }
