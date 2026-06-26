@@ -49,6 +49,9 @@ section {
 .project-link {
 	position: relative;
 }
+.selected .project-link {
+	overflow-y: auto;
+}
 .project-text {
 	color: white;
 	position: absolute;
