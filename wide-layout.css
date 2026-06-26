@@ -1,0 +1,42 @@
+@media only screen and (min-aspect-ratio: 2.0) {
+	section {
+		width: 180vh;
+		height: 90vh;
+
+		grid-template-rows: repeat(3, calc(30vh - 10px));
+		grid-template-columns: repeat(6, calc(30vh - 10px));
+	}
+
+	
+	#platformer-roguelike {
+		grid-row: 1 / span 2;
+		grid-column: 1 / span 2;
+	}
+	#project-euler {
+		grid-row: 1 / span 2;
+		grid-column: 3 / span 1;
+	}
+	#physics-simulation .background-image {
+		background-image: url(images/PhysicsSimulation.PNG);
+	}
+	#math-editor {
+		grid-row: 3 / span 1;
+		grid-column: 2 / span 2;
+	}
+	#random-survival-game {
+		grid-row: 1 / span 1;
+		grid-column: 4 / span 2;
+	}
+	#stick-dungeon {
+		grid-row: 1 / span 2;
+		grid-column: 6 / span 1;
+	}
+	#hypocube-translocation {
+		grid-row: 2 / span 2;
+		grid-column: 4 / span 2;
+	}
+	#raycaster {
+		grid-row: 3 / span 1;
+		grid-column: 6 / span 1;
+	}
+}
