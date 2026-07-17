@@ -28,7 +28,7 @@ export const PROJECTS: ProjectData[] = [
 		description: "A procedurally-generated 2D platformer game about creatures with complex emergent behavior.",
 		button: {
 			text: "Play online",
-			url: "https://rclaytondev.github.io/platformer-roguelike"
+			url: "https://rclaytondev.github.io/arachnomechanica"
 		},
 		lightBackground: false,
 		image: platformerRoguelikeImage
